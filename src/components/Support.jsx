@@ -6,8 +6,8 @@ const Support = () => {
       <div className="w-[68vw] h-44 bg-blue rounded-xl relative flex justify-between">
         <img src="/circle.svg" className="absolute bottom-0 right-0 h-40" />
         <div className="flex justify-around  items-center text-white w-full">
-          <img src="/support.svg" />
-          <div className="z-10 -ml-20">
+          <img src="/support.svg" className="hidden md:block"/>
+          <div className="hidden md:block z-10 -ml-20">
             <h3 className="font-bold text-xl">Want to delve deeper into the program?</h3>
             <h3>
               Share your details to receive expert insights from our program

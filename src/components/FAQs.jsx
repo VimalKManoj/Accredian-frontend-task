@@ -36,7 +36,7 @@ const FAQs = () => {
       <h2 className="text-2xl font-inter font-medium p-10">
         Frequently Asked <span className="text-blue ">Questions?</span>{" "}
       </h2>
-      <div ref={ref} className="w-2/3 flex justify-around items-center">
+      <div ref={ref} className="w-2/3 flex flex-col md:flex-row justify-around items-center">
         <motion.div
           variants={slideUp(0.2)}
           initial="hidden"

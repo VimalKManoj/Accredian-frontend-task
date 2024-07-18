@@ -17,21 +17,6 @@ const Hero = () => {
     },
   });
 
-  const slideUp = (delay) => ({
-    hidden: {
-      opacity: 0,
-      y: 100,
-    },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        delay: delay,
-      },
-    },
-  });
-
   const ImageShow = (delay, rotate) => ({
     hidden: {
       opacity: 0,
@@ -57,7 +42,7 @@ const Hero = () => {
         variants={slideDown(0.2)}
         initial="hidden"
         animate="show"
-        className="w-1/3 h-12  flex justify-around items-center rounded-3xl bg-blue/10 shadow-md"
+        className="w-1/3 h-12 hidden md:flex justify-around items-center rounded-3xl bg-blue/10 shadow-md"
       >
         <a
           className="cursor-pointer text-blue  hover:text-blue scroll-smooth"
@@ -84,20 +69,57 @@ const Hero = () => {
           Support
         </a>
       </motion.nav>
-      <section className="flex justify-around lg:px-20 w-full h-[60vh]  m-12 ">
+      <section className="flex flex-col md:flex-row justify-around lg:px-20 w-full   m-12 ">
+        <div className="block md:hidden flex-1 bg-hero rounded-lg  relative  ">
+          <div className="relative h-[30vh] overflow-hidden">
+            <img
+              src="/hero_bg.png"
+              className="absolute h-full w-full scale-[1.2] object-cover z-10"
+            />
+            <img src="/Line_2.svg" className="absolute top-0 z-0 w-full" />
+          </div>
+
+          <motion.img
+            variants={ImageShow(0.2, 180)}
+            initial="hidden"
+            animate="show"
+            src="/Money.svg"
+            className="w-24 absolute -top-10 rotate-180 z-50"
+          />
+          <motion.img
+            variants={ImageShow(0.3, 45)}
+            initial="hidden"
+            animate="show"
+            src="/Money.svg"
+            className="w-24 absolute -bottom-10 z-50"
+          />
+          <motion.img
+            variants={ImageShow(0.2, 45)}
+            initial="hidden"
+            animate="show"
+            src="/Money.svg"
+            className="w-24 absolute right-16 top-40 rotate-12  z-50 scale-[0.6]"
+          />
+          <motion.img
+            variants={ImageShow(0.2, 130)}
+            initial="hidden"
+            animate="show"
+            src="/Money.svg"
+            className="w-24 absolute -right-10 top-0 rotate-90 z-50"
+          />
+        </div>
         <motion.div className="flex-1 flex flex-col items-start py-10">
-          <h1 className="text-8xl font-bold font-inter pb-6">
+          <h1 className="text-5xl md:text-8xl font-bold font-inter pb-6">
             Let’s Learn & Earn
           </h1>
           <img src="/Line.svg" className="w-3/5 pb-10" />
-          <h3 className="text-2xl font-inter font-medium pb-10">
+          <h3 className="text-xl font-inter font-medium pb-10">
             Get a chance to win up-to{" "}
             <span className="font-bold text-4xl text-blue"> Rs.15,000</span>
           </h3>
-          {/* Refer Now */}{" "}
-          <ReferralModal  />
+          {/* Refer Now */} <ReferralModal />
         </motion.div>
-        <div className="flex-1 bg-hero rounded-lg h-full relative ">
+        <div className="hidden md:block flex-1 bg-hero rounded-lg h-full relative ">
           <div className="relative h-full overflow-hidden">
             <img
               src="/hero_bg.png"

@@ -46,7 +46,7 @@ const Benefits = () => {
   return (
     <section
       id="benefits"
-      className="w-full  flex flex-col justify-around items-center p-10"
+      className="hidden md:flex w-full flex-col justify-around items-center p-10"
     >
       <h2 className="text-2xl font-inter font-medium p-10">
         What are the referral <span className="text-blue ">Benefits?</span>{" "}

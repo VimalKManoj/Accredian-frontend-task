@@ -30,13 +30,12 @@ const HowToRefer = () => {
 
   return (
     <div
-     
-      className="w-full h-[70vh] bg-[#F9F8FE] flex flex-col justify-center items-center"
+      className="w-full md:h-[70vh] bg-[#F9F8FE] flex flex-col justify-center items-center"
     >
       <h2 className="text-2xl font-inter font-medium">
         How do I<span className="text-blue"> Refer?</span>
       </h2>
-      <div  ref={ref} className="flex justify-around items-center w-full p-10">
+      <div  ref={ref} className="flex flex-col md:flex-row justify-around items-center w-full p-10">
         <motion.div
           variants={slideUp(0.2)}
           initial="hidden"

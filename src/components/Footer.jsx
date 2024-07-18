@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <section className="w-full h-[40vh] bg-[#282828]">
-      <div className=" h-[40vh] flex justify-around items-center text-white">
+    <section className="w-full md:h-[40vh] bg-[#282828]">
+      <div className=" h-[40vh] flex flex-col md:flex-row justify-around items-center text-white">
         <div className="flex flex-col ">
           <img src="/logo_white.png" alt="" className="w-52" />
         </div>

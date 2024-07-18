@@ -44,7 +44,7 @@ const ReferralModal = () => {
     if (validateForm()) {
       try {
         const response = await axios.post(
-          "http://localhost:3000/api/referals",
+          "https://accredian-backend-task-9ts1.onrender.com/api/referals",
           formData,
           {
             withCredentials: true,
